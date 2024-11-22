@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ReactComponent as Logo } from '../assets/header-logo.svg'; // Import your SVG logo
 import heroProfile from '../assets/hero-profile.png'; // Import the image
+import backgroundWhite from '../assets/background-white.png'; // Import the background image
+
 
 function Hero() {
     // State to store the current time
@@ -22,17 +24,17 @@ function Hero() {
     }, [] );
 
     return (
-        <div className="flex flex-col items-center justify-start p-8 h-screen font-poppins">
+        <div className="flex flex-col items-center justify-start p-8 h-screen font-poppins bg-cover bg-center" style={ { backgroundImage: `url(${ backgroundWhite })` } }>
             {/* SVG Logo */ }
-            <div className="w-[390px] sm:w-[600px] lg:w-[1100px] text-center mb-8">
+            <div className="w-[300px] sm:w-[600px] lg:w-[1100px] text-center mb-8">
                 <Logo className="mx-auto h-auto w-full" />
             </div>
 
             {/* 2-Column Section */ }
-            <div className="relative flex flex-col sm:flex-row items-center sm:items-start justify-between w-[390px] sm:w-[600px] lg:w-[1100px]">
+            <div className="relative flex flex-col sm:flex-row items-center sm:items-start justify-between w-[315px] sm:w-[600px] lg:w-[1100px]">
                 {/* Left Column - Text, Button, and Local Time */ }
                 <div className="sm:w-1/2 mb-8 sm:mb-0 text-center sm:text-left relative">
-                    <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-military-green mb-4">
+                    <p className="text-base sm:text-lg lg:text-2xl font-semibold text-military-green mb-4">
                         Design is my passion! I create user-friendly, seamless digital experiences that bring your vision to life. Let’s make something amazing—hire me!
                     </p>
                     <button className="bg-grey-primary text-white-secondary font-bold py-4 px-12 rounded-2xl shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-military-green hover:to-military-green-secondary hover:shadow-2xl transition-all duration-300">

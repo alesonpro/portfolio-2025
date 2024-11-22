@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ReactComponent as Logo } from '../assets/logo.svg'; // Import your SVG logo
+import backgroundWhite from '../assets/background-white.png'; // Import the background image
+
 
 function Navbar() {
     const [ isOpen, setIsOpen ] = useState( false );

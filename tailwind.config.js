@@ -26,7 +26,9 @@ module.exports = {
         'off-white-dark-theme': "#BCBDB2",
 
         'military-green': "#63634F",
-        'military-green-secondary': "#818173"
+        'military-green-secondary': "#818173",
+
+        'brown-primary': "#513714"
       },
     },
   },

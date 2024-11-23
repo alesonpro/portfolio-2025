@@ -14,9 +14,9 @@ function App() {
         backgroundSize: 'cover',
       } }
     >
-      <Navbar />
-      <Hero />
-      <Works />
+      <Navbar/>
+      <Hero/>
+      <Works/>
     </div>
   );
 }

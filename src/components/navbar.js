@@ -101,36 +101,36 @@ function Navbar() {
                         </svg>
                     </button>
                 </div>
-                <div className="flex flex-col items-start justify-between h-full space-y-4 px-6 pt-20 relative">
+                <div className="flex flex-col items-start space-y-6 justify-between h-full px-6 pt-20 relative">
                     {/* Top Navigation Links */ }
                     <div>
                         <a
                             href="#work"
-                            className="block text-4xl font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
+                            className="block text-4xl pb-4 font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
                         >
                             WORK
                         </a>
                         <a
                             href="#about"
-                            className="block text-4xl font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
+                            className="block text-4xl pb-4 font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
                         >
                             ABOUT
                         </a>
                         <a
                             href="#testimonials"
-                            className="block text-4xl font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
+                            className="block text-4xl pb-4 font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
                         >
                             TESTIMONIALS
                         </a>
                         <a
                             href="#contact"
-                            className="block text-4xl font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
+                            className="block text-4xl pb-4 font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
                         >
                             CONTACT
                         </a>
                         <a
                             href="#resume"
-                            className="block text-4xl font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
+                            className="block text-4xl pb-4 font-medium text-white-primary hover:text-military-green-secondary transition duration-300 ease-in-out transform hover:scale-105"
                         >
                             RESUME
                         </a>

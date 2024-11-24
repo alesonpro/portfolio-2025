@@ -1,8 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ReactComponent as Logo } from '../assets/logo.svg'; // Import your SVG logo
 
 function Navbar() {
     const [ isOpen, setIsOpen ] = useState( false );
+
+    // Disable/Enable scrolling when the menu is open/closed
+    useEffect( () => {
+        if ( isOpen ) {
+            document.body.style.overflow = 'hidden'; // Disable scrolling
+        } else {
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+
+        return () => {
+            document.body.style.overflow = ''; // Cleanup in case the component unmounts
+        };
+    }, [ isOpen ] );
+    
+    // Close the menu automatically when resizing to desktop view
+    useEffect( () => {
+        const handleResize = () => {
+            if ( window.innerWidth >= 768 && isOpen ) {
+                setIsOpen( false ); // Close the menu when entering desktop view
+            }
+        };
+
+        window.addEventListener( 'resize', handleResize );
+
+        return () => {
+            window.removeEventListener( 'resize', handleResize ); // Cleanup event listener on component unmount
+        };
+    }, [ isOpen ] );
 
     return (
         <nav>
@@ -17,23 +45,38 @@ function Navbar() {
 
                     {/* Desktop Menu */ }
                     <div className="hidden md:flex space-x-4">
-                        <a href="#work" className="relative text-military-green group">
+                        <a
+                            href="#work"
+                            className="relative text-military-green group"
+                        >
                             work
                             <span className="absolute inset-x-0 bottom-0 h-1 bg-military-green transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#about" className="relative text-military-green group">
+                        <a
+                            href="#about"
+                            className="relative text-military-green group"
+                        >
                             about
                             <span className="absolute inset-x-0 bottom-0 h-1 bg-military-green transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#testimonials" className="relative text-military-green group">
+                        <a
+                            href="#testimonials"
+                            className="relative text-military-green group"
+                        >
                             testimonials
                             <span className="absolute inset-x-0 bottom-0 h-1 bg-military-green transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#contact" className="relative text-military-green group">
+                        <a
+                            href="#contact"
+                            className="relative text-military-green group"
+                        >
                             contact
                             <span className="absolute inset-x-0 bottom-0 h-1 bg-military-green transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
-                        <a href="#resume" className="relative text-military-green group">
+                        <a
+                            href="#resume"
+                            className="relative text-military-green group"
+                        >
                             resume
                             <span className="absolute inset-x-0 bottom-0 h-1 bg-military-green transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
                         </a>
@@ -102,7 +145,7 @@ function Navbar() {
                     </button>
                 </div>
                 <div className="flex flex-col items-start space-y-6 justify-between h-full px-6 pt-20 relative">
-                    {/* Top Navigation Links */ }
+                    {/* Menu Links */ }
                     <div>
                         <a
                             href="#work"

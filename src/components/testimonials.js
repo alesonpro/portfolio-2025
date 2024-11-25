@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import testimonialImage1 from "../assets/testimonials-1.png";
 import testimonialImage2 from "../assets/testimonials-2.png";
+import testimonialImage3 from "../assets/testimonials-3.png";
 import backgroundImage from '../assets/background-black.png';
 import contactLogo from "../assets/contact-logo.svg"; // Adjust the path if needed
 
@@ -19,10 +20,10 @@ function Testimonials() {
             image: testimonialImage2,
         },
         {
-            quote: "Aleson’s designs are thoughtful and precise—working with him as a front-end developer was a pleasure!",
-            name: "Miguel De Leon",
-            title: "Software Engineer @BitrockIT",
-            image: testimonialImage2,
+            quote: "Working with Rolf was inspiring due to his passion for UI/UX design, commitment to improvement, and supportive guidance.",
+            name: "Leslie Fuentes",
+            title: "Graphic Designer Freelance",
+            image: testimonialImage3,
         },
     ];
 
@@ -169,7 +170,6 @@ function Testimonials() {
                 </div>
             </section>
 
-            {/* Background Section */ }
             <section
                 className="relative rounded-[10px] p-8 sm:p-16 mt-16 mx-auto"
                 style={ {
@@ -182,23 +182,30 @@ function Testimonials() {
                     padding: '50px',
                 } }
             >
-                <div className="rounded-[50px] text-center text-white">
+                <div className="rounded-[50px] text-center text-white min-h-[500px] sm:min-h-0 flex flex-col justify-center">
                     <p className="text-grey-secondary text-xl sm:text-2xl md:text-3xl font-medium mb-6">
                         (got a challenge?)
                     </p>
                     <h2 className="font-bold text-off-white-dark-theme text-4xl sm:text-5xl md:text-7xl lg:text-9xl leading-tight mb-6">
                         LET'S MAKE <br /> IT HAPPEN
                     </h2>
-                    <button
-                        className="bg-grey-primary text-white-secondary py-3 px-6 rounded-md text-lg sm:text-xl font-semibold mb-6 transition-all duration-500 ease-in-out transform hover:bg-military-green hover:scale-110"
-                    >
-                        <a href="mailto:rolfaleson.pro@gmail.com">rolfaleson.pro@gmail.com</a>
-                    </button>
-                    <div className="text-md sm:text-lg md:text-xl font-medium">
+                    {/* Updated Button */ }
+                    <div className="flex justify-center">
+                        <button
+                            className="inline-flex bg-grey-primary text-white-secondary py-3 px-6 rounded-md text-lg sm:text-xl font-semibold mb-6 transition-all duration-500 ease-in-out transform hover:bg-military-green hover:scale-110"
+                        >
+                            <a href="mailto:rolfaleson.pro@gmail.com" className="w-full text-center">
+                                rolfaleson.pro@gmail.com
+                            </a>
+                        </button>
+                    </div>
+                    <div className="text-off-white-dark-theme text-md sm:text-lg md:text-xl font-medium">
                         <p>{ localTime }</p>
                     </div>
                 </div>
             </section>
+
+            
         </div>
     );
 }

@@ -37,7 +37,7 @@ function Works() {
     }, [] );
 
     return (
-        <section
+        <section id="work"
             className="relative bg-cover bg-center min-h-screen sm:min-h-[calc(100vh-50px)]"
             style={ {
                 backgroundImage: `url(${ backgroundBlack })`,
@@ -168,7 +168,7 @@ function Works() {
             </div>
 
             {/* About Me Section */ }
-            <div className="flex flex-col sm:flex-row justify-center pb-20 items-center sm:items-center mt-16 sm:mt-24 px-4 sm:px-8 w-full sm:gap-8 lg:gap-12">
+            <div id="about" className="flex flex-col sm:flex-row justify-center pb-20 items-center sm:items-center mt-16 sm:mt-24 px-4 sm:px-8 w-full sm:gap-8 lg:gap-12">
                 {/* Left Column: Image */ }
                 <div className="w-full sm:w-[45%] mb-8 sm:mb-0 flex justify-center">
                     <img

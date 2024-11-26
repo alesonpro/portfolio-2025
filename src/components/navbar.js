@@ -12,6 +12,11 @@ function Navbar() {
         };
     }, [ isOpen ] );
 
+    // Close navbar when a link is clicked
+    const handleLinkClick = () => {
+        setIsOpen( false );
+    };
+
     return (
         <nav className="fixed bottom-4 right-4 z-50">
             {/* Floating Circular Button */ }
@@ -46,7 +51,8 @@ function Navbar() {
 
             {/* Sliding Menu */ }
             <div
-                className={ `fixed top-0 right-0 h-full bg-military-green-secondary text-white-primary shadow-lg p-6 flex flex-col space-y-4 transform transition-all duration-300 ease-in-out ${ isOpen ? 'translate-x-0' : 'translate-x-full' }` }
+                className={ `fixed top-0 right-0 h-full bg-military-green-secondary text-white-primary shadow-lg p-6 flex flex-col space-y-4 transform transition-all duration-500 ease-out ${ isOpen ? 'translate-x-0' : 'translate-x-full'
+                    }` }
             >
                 {/* Close Button */ }
                 <button
@@ -70,40 +76,29 @@ function Navbar() {
                 </button>
 
                 {/* Navigation Links */ }
-                <a
-                    href="#work"
-                    className="text-4xl sm:text-5xl lg:text-7xl text-white-primary font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4"
-                >
-                    WORK
-                </a>
-                <a
-                    href="#about"
-                    className="text-4xl sm:text-5xl lg:text-7xl text-white-primary font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4"
-                >
-                    ABOUT
-                </a>
-                <a
-                    href="#testimonials"
-                    className="text-4xl sm:text-5xl lg:text-7xl text-white-primary font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4"
-                >
-                    TESTIMONIALS
-                </a>
-                <a
-                    href="#contact"
-                    className="text-4xl sm:text-5xl lg:text-7xl text-white-primary font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4"
-                >
-                    CONTACT
-                </a>
-                <a
-                    href="#resume"
-                    className="text-4xl sm:text-5xl lg:text-7xl text-white-primary font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4"
-                >
-                    RESUME
-                </a>
+                { [
+                    { href: '#hero', label: 'HOME' },
+                    { href: '#work', label: 'WORK' },
+                    { href: '#about', label: 'ABOUT' },
+                    { href: '#testimonials', label: 'TESTIMONIALS' },
+                    { href: '#contact', label: 'CONTACT' },
+                    { href: '#resume', label: 'RESUME' },
+                ].map( ( link ) => (
+                    <a
+                        key={ link.href }
+                        href={ link.href }
+                        onClick={ handleLinkClick }
+                        className="text-4xl sm:text-5xl lg:text-7xl text-white-primary font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4"
+                    >
+                        { link.label }
+                    </a>
+                ) ) }
 
                 {/* Email Section */ }
                 <div>
-                    <p className="mt-60 sm:mt-60 md:mt-56 lg:mt-32 text-base sm:text-base lg:text-xl text-white-dark-theme font-medium">EMAIL ADDRESS</p>
+                    <p className="mt-60 sm:mt-60 md:mt-56 lg:mt-32 text-base sm:text-base lg:text-xl text-white-dark-theme font-medium">
+                        EMAIL ADDRESS
+                    </p>
                     <a
                         href="mailto:rolfaleson.pro@gmail.com"
                         className="text-xl sm:text-base lg:text-xl text-off-white-dark-theme font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4 mt-2"

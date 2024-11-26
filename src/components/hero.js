@@ -5,7 +5,7 @@ import backgroundWhite from '../assets/background-white.png'; // Import the back
 
 function Hero() {
     return (
-        <div className="flex flex-col items-center justify-start pt-8 h-screen font-poppins bg-cover bg-center" style={ { backgroundImage: `url(${ backgroundWhite })` } }>
+        <div id="hero" className="flex flex-col items-center justify-start pt-8 h-screen font-poppins bg-cover bg-center" style={ { backgroundImage: `url(${ backgroundWhite })` } }>
             {/* SVG Logo */ }
             <div href="#" className="w-[310px] sm:w-[600px] lg:w-[1100px] text-center mb-5">
                 <Logo className="mx-auto h-auto w-full" />

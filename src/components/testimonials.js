@@ -97,7 +97,7 @@ function Testimonials() {
     }, [] );
 
     return (
-        <div>
+        <div id="testimonials">
             <section
                 ref={ sectionRef }
                 className="px-4 sm:px-6 lg:px-8 py-16 overflow-x-hidden"
@@ -181,7 +181,7 @@ function Testimonials() {
                     padding: '50px',
                 } }
             >
-                <div className="rounded-[50px] text-center text-white min-h-[500px] sm:min-h-0 flex flex-col justify-center">
+                <div id="contact" className="rounded-[50px] text-center text-white min-h-[500px] sm:min-h-0 flex flex-col justify-center">
                     <p className="text-grey-secondary text-xl sm:text-2xl md:text-3xl font-medium mb-6">
                         (got a challenge?)
                     </p>

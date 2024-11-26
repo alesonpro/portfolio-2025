@@ -96,7 +96,7 @@ function Navbar() {
 
                 {/* Email Section */ }
                 <div>
-                    <p className="mt-60 sm:mt-60 md:mt-56 lg:mt-32 text-base sm:text-base lg:text-xl text-white-dark-theme font-medium">
+                    <p className="mt-32 sm:mt-60 md:mt-56 lg:mt-32 text-base sm:text-base lg:text-xl text-white-dark-theme font-medium">
                         EMAIL ADDRESS
                     </p>
                     <a

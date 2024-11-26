@@ -3,7 +3,6 @@ import testimonialImage1 from "../assets/testimonials-1.png";
 import testimonialImage2 from "../assets/testimonials-2.png";
 import testimonialImage3 from "../assets/testimonials-3.png";
 import backgroundImage from '../assets/background-black.png';
-import contactLogo from "../assets/contact-logo.svg"; // Adjust the path if needed
 
 function Testimonials() {
     const testimonials = [

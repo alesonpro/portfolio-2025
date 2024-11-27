@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/navbar';
 import Hero from './components/hero';
 import Works from './components/works';
+import About from './components/about';
 import Testimonials from './components/testimonials';
 import Footer from './components/footer';
 import backgroundWhite from './assets/background-white.png'; // Import your background image
@@ -33,6 +34,15 @@ function App() {
           }` }
       >
         <Works id="work" />
+      </div>
+
+      {/* Works Section with Scale-In & Bottom-to-Top Transition */ }
+      <div
+        id="about"
+        className={ `transform transition-all duration-1000 ease-in-out ${ isLoaded ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-10 scale-90 opacity-0'
+          }` }
+      >
+        <About id="about" />
       </div>
 
       {/* Testimonials Section with Scale-In & Bottom-to-Top Transition */ }

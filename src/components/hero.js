@@ -43,7 +43,7 @@ function Hero() {
                         Design is my passion! I create user-friendly, seamless digital experiences that bring your vision to life. Let’s make something amazing—hire me!
                     </p>
                     <a href="mailto:rolfaleson.pro@gmail.com?subject=Inquiry about Design Services&body=Hi, I would like to inquire about your design services.">
-                        <button className="bg-grey-primary text-white-secondary font-bold py-4 px-12 rounded-2xl shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-military-green hover:to-military-green-secondary hover:shadow-2xl transition-all duration-300">
+                        <button className="mt-8 bg-grey-primary text-white-secondary font-bold py-4 px-12 rounded-2xl shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-military-green hover:to-military-green-secondary hover:shadow-2xl transition-all duration-300">
                             Hire me!
                         </button>
                     </a>

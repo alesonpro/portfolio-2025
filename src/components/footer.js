@@ -82,6 +82,11 @@ const Footer = () => {
                                     Github
                                 </a>
                             </li>
+                            <li>
+                                <a href="https://drive.google.com/file/d/1K77AmZa5inSeZgx5vUTeMPLtkHsjUbDX/view?usp=sharing" className="text-military-green-secondary hover:underline">
+                                    Resume
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -173,6 +178,11 @@ const Footer = () => {
                                 <li>
                                     <a href="https://github.com/alesonpro" className="text-military-green-secondary hover:underline">
                                         Github
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://drive.google.com/file/d/1K77AmZa5inSeZgx5vUTeMPLtkHsjUbDX/view?usp=sharing" className="text-military-green-secondary hover:underline">
+                                        Resume
                                     </a>
                                 </li>
                             </ul>

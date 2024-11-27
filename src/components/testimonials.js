@@ -40,6 +40,9 @@ function Testimonials() {
         <div>
             <div id="testimonials">
                 <section className="px-4 sm:px-6 lg:px-8 py-16 overflow-x-hidden">
+                    <div className="text-military-green font-bold text-2xl sm:text-3xl md:text-4xl sm:text-left mb-4 sm:mb-0">
+                        (testimonial)
+                    </div>
                     <h2 className="text-black-secondary font-bold text-left leading-tight text-[35px] md:text-[50px] lg:text-[110px] max-w-[25ch]">
                         Words from Those Who’ve Worked With Me
                     </h2>
@@ -53,7 +56,6 @@ function Testimonials() {
                             >
                                 { testimonials[ currentIndex ].quote }
                             </h4>
-
                             <div className="mt-6 sm:mt-8 md:mt-10">
                                 <p className="text-black-secondary font-bold text-[18px] lg:text-[22px]">
                                     { testimonials[ currentIndex ].name }
@@ -87,7 +89,10 @@ function Testimonials() {
                         maxWidth: "1500px",
                     } }
                 >
-                    <div id="contact" className="rounded-[50px] text-center text-white min-h-[500px] sm:min-h-0 flex flex-col justify-center">
+                    <div
+                        id="contact"
+                        className="rounded-[50px] text-center text-white min-h-[500px] sm:min-h-0 flex flex-col justify-center"
+                    >
                         <p className="text-grey-secondary text-xl sm:text-2xl md:text-3xl font-medium mb-6">
                             Got a challenge?
                         </p>
@@ -96,7 +101,10 @@ function Testimonials() {
                         </h2>
                         <div className="flex justify-center">
                             <button className="inline-flex bg-grey-primary text-white-secondary py-3 px-6 rounded-md text-lg sm:text-xl font-semibold mb-6">
-                                <a href="mailto:rolfaleson.pro@gmail.com" className="w-full text-center">
+                                <a
+                                    href="mailto:rolfaleson.pro@gmail.com"
+                                    className="w-full text-center"
+                                >
                                     rolfaleson.pro@gmail.com
                                 </a>
                             </button>

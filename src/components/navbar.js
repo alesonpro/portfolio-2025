@@ -83,7 +83,7 @@ function Navbar() {
                     { href: '#testimonials', label: 'TESTIMONIALS' },
                     { href: '#contact', label: 'CONTACT' },
                     {
-                        href: 'https://drive.google.com/file/d/1eUrxQzCxH546Fk1s9NW3irjY79MHwlaZ/view?usp=sharing', // Google Drive link
+                        href: 'https://drive.google.com/file/d/1K77AmZa5inSeZgx5vUTeMPLtkHsjUbDX/view?usp=sharing', // Google Drive link
                         label: 'RESUME',
                         target: '_blank', 
                     },

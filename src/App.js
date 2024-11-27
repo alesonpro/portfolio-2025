@@ -22,6 +22,7 @@ function App() {
       style={ {
         background: `url(${ backgroundWhite }) no-repeat center center fixed`,
         backgroundSize: 'cover',
+        overflowX: 'hidden', // Prevent horizontal scrolling
       } }
     >
       <Navbar />
@@ -36,7 +37,7 @@ function App() {
         <Works id="work" />
       </div>
 
-      {/* Works Section with Scale-In & Bottom-to-Top Transition */ }
+      {/* About Section with Scale-In & Bottom-to-Top Transition */ }
       <div
         id="about"
         className={ `transform transition-all duration-1000 ease-in-out ${ isLoaded ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-10 scale-90 opacity-0'

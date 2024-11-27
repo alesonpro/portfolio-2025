@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Ensure AOS CSS is imported
 import testimonialImage1 from "../assets/testimonials-1.png";
 import testimonialImage2 from "../assets/testimonials-2.png";
 import testimonialImage3 from "../assets/testimonials-3.png";
 import backgroundImage from "../assets/background-black.png";
+
+// Initialize AOS
+AOS.init();
 
 function Testimonials() {
     const testimonials = [
@@ -28,10 +33,39 @@ function Testimonials() {
 
     const [ currentIndex, setCurrentIndex ] = useState( 0 );
 
+    const [ time, setTime ] = useState( '' );
+    const [ location, setLocation ] = useState( ' Philippines' );
+
+    const handlePrev = () => {
+        setCurrentIndex( ( prevIndex ) =>
+            prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+        );
+    };
+
+    const handleNext = () => {
+        setCurrentIndex( ( prevIndex ) =>
+            ( prevIndex + 1 ) % testimonials.length
+        );
+    };
+
     useEffect( () => {
-        const interval = setInterval( () => {
-            setCurrentIndex( ( prevIndex ) => ( prevIndex + 1 ) % testimonials.length );
-        }, 5000 );
+        // Function to update time every second
+        const updateTime = () => {
+            const currentTime = new Date();
+            const hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes();
+            const seconds = currentTime.getSeconds();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const localHours = hours % 12 || 12;
+            const localMinutes = minutes < 10 ? `0${ minutes }` : minutes;
+            const localSeconds = seconds < 10 ? `0${ seconds }` : seconds;
+            const formattedTime = `${ localHours }:${ localMinutes }:${ localSeconds } ${ ampm }`;
+            setTime( formattedTime );
+        };
+
+        // Update time every second
+        const interval = setInterval( updateTime, 1000 );
+        updateTime(); // Initialize with current time
 
         return () => clearInterval( interval );
     }, [] );
@@ -40,10 +74,18 @@ function Testimonials() {
         <div>
             <div id="testimonials">
                 <section className="px-4 sm:px-6 lg:px-8 py-16 overflow-x-hidden">
-                    <div className="text-military-green font-bold text-2xl sm:text-3xl md:text-4xl sm:text-left mb-4 sm:mb-0">
+                    <div
+                        className="text-military-green font-bold text-2xl sm:text-3xl md:text-4xl sm:text-left mb-4 sm:mb-0"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                    >
                         (testimonial)
                     </div>
-                    <h2 className="text-black-secondary font-bold text-left leading-tight text-[35px] md:text-[50px] lg:text-[110px] max-w-[25ch]">
+                    <h2
+                        className="text-black-secondary font-bold text-left leading-tight text-[35px] md:text-[50px] lg:text-[110px] max-w-[25ch]"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                    >
                         Words from Those Who’ve Worked With Me
                     </h2>
 
@@ -53,10 +95,17 @@ function Testimonials() {
                             <h4
                                 key={ currentIndex }
                                 className="mt-4 sm:mt-8 text-grey-primary font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-left min-h-[180px] overflow-hidden testimonial-text"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
                             >
                                 { testimonials[ currentIndex ].quote }
                             </h4>
-                            <div className="mt-6 sm:mt-8 md:mt-10">
+                            <div
+                                className="mt-6 sm:mt-8 md:mt-10"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="200"
+                            >
                                 <p className="text-black-secondary font-bold text-[18px] lg:text-[22px]">
                                     { testimonials[ currentIndex ].name }
                                 </p>
@@ -64,10 +113,29 @@ function Testimonials() {
                                     { testimonials[ currentIndex ].title }
                                 </p>
                             </div>
+                            {/* Navigation Buttons */ }
+                            <div className="flex gap-4 mt-8">
+                                <button
+                                    onClick={ handlePrev }
+                                    className="bg-grey-primary text-white py-4 px-12 rounded-2xl font-semibold hover:bg-military-green transition duration-300"
+                                >
+                                    PREV
+                                </button>
+                                <button
+                                    onClick={ handleNext }
+                                    className="bg-grey-primary text-white py-4 px-12 rounded-2xl font-semibold hover:bg-military-green transition duration-300"
+                                >
+                                    NEXT
+                                </button>
+                            </div>
                         </div>
 
                         {/* Right Column */ }
-                        <div className="flex justify-center items-center px-4 order-first md:order-last">
+                        <div
+                            className="flex justify-center items-center px-4 order-first md:order-last"
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
+                        >
                             <img
                                 key={ currentIndex }
                                 src={ testimonials[ currentIndex ].image }
@@ -89,10 +157,7 @@ function Testimonials() {
                         maxWidth: "1500px",
                     } }
                 >
-                    <div
-                        id="contact"
-                        className="rounded-[50px] text-center text-white min-h-[500px] sm:min-h-0 flex flex-col justify-center"
-                    >
+                    <div id="contact" className="rounded-[50px] text-center text-white min-h-[500px] sm:min-h-0 flex flex-col justify-center">
                         <p className="text-grey-secondary text-xl sm:text-2xl md:text-3xl font-medium mb-6">
                             Got a challenge?
                         </p>
@@ -108,6 +173,18 @@ function Testimonials() {
                                     rolfaleson.pro@gmail.com
                                 </a>
                             </button>
+                        </div>
+
+                        {/* Local Time Tracker */ }
+                        <div className="mt-6">
+                            <p className="text-off-white-dark-theme font-bold text-xl">
+                                LOCAL TIME
+                            </p>
+                            <p className="text-off-white-dark-theme font-medium text-lg">
+                                {/* On mobile (sm) it will be block, on larger screens (md and above) it will be inline */ }
+                                <span className="block sm:inline">{ time }</span>
+                                <span className="block sm:inline">{ location }</span>
+                            </p>
                         </div>
                     </div>
                 </section>

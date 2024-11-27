@@ -10,11 +10,26 @@ function Works() {
     const [ currentProject, setCurrentProject ] = useState( 1 );
     const projectRefs = useRef( [] );
 
-    // Project details
+    // Project details with added links
     const projects = [
-        { image: projectImage, title: 'Taraki Consortium', year: 2024 },
-        { image: projectImage2, title: 'INTTO', year: 2024 },
-        { image: projectImage3, title: 'FitFUTR Case Study', year: 2024 },
+        {
+            image: projectImage,
+            title: 'Taraki Consortium',
+            year: 2024,
+            link: 'https://taraki.vercel.app/' 
+        },
+        {
+            image: projectImage2,
+            title: 'INTTO',
+            year: 2024,
+            link: 'https://intto.vercel.app/' 
+        },
+        {
+            image: projectImage3,
+            title: 'FitFUTR Case Study',
+            year: 2024,
+            link: 'https://www.behance.net/gallery/212090317/UX-Case-Study-FitFUTR' 
+        },
     ];
 
     useEffect( () => {
@@ -91,11 +106,14 @@ function Works() {
                         { currentProject === index + 1 ? `0${ index + 1 }` : '' }
                     </div>
                     <div className="flex flex-col w-full sm:w-[930px]">
-                        <img
-                            src={ project.image }
-                            alt={ `${ project.title } Thumbnail` }
-                            className="w-full rounded-lg"
-                        />
+                        {/* Add anchor tag to make image clickable */ }
+                        <a href={ project.link } target="_blank" rel="noopener noreferrer">
+                            <img
+                                src={ project.image }
+                                alt={ `${ project.title } Thumbnail` }
+                                className="w-full rounded-lg"
+                            />
+                        </a>
                         <div className="flex flex-col sm:flex-row justify-start sm:justify-between items-start sm:items-center mt-4 sm:mt-6">
                             <h3 className="text-off-white-dark-theme text-2xl sm:text-3xl font-bold">
                                 { project.title }

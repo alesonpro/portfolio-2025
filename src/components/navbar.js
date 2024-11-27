@@ -22,10 +22,10 @@ function Navbar() {
             {/* Floating Circular Button */ }
             <button
                 onClick={ () => setIsOpen( !isOpen ) }
-                className="bg-military-green-secondary text-white-primary w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-military-green-secondary transition-all duration-300 ease-in-out"
+                className="bg-military-green-secondary text-white-primary w-20 h-20 rounded-full flex items-center justify-center shadow-lg hover:bg-military-green-secondary transition-all duration-300 ease-in-out"
             >
                 <svg
-                    className="h-6 w-6"
+                    className="h-10 w-10"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -82,7 +82,11 @@ function Navbar() {
                     { href: '#about', label: 'ABOUT' },
                     { href: '#testimonials', label: 'TESTIMONIALS' },
                     { href: '#contact', label: 'CONTACT' },
-                    { href: '#resume', label: 'RESUME' },
+                    {
+                        href: 'https://drive.google.com/file/d/1eUrxQzCxH546Fk1s9NW3irjY79MHwlaZ/view?usp=sharing', // Google Drive link
+                        label: 'RESUME',
+                        target: '_blank', 
+                    },
                 ].map( ( link ) => (
                     <a
                         key={ link.href }

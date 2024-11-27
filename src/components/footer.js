@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../assets/logo-dark.svg';  
+import logo from '../assets/logo-dark.svg';
 
 const Footer = () => {
     return (
@@ -11,7 +11,7 @@ const Footer = () => {
                         <h3 className="text-gray-primary font-semibold mb-4">MENU</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#home" className="text-military-green-secondary hover:underline">
+                                <a href="#hero" className="text-military-green-secondary hover:underline">
                                     Home
                                 </a>
                             </li>
@@ -42,17 +42,17 @@ const Footer = () => {
                         <h3 className="text-gray-primary font-semibold mb-4">SOCIALS</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#instagram" className="text-military-green-secondary hover:underline">
+                                <a href="https://www.instagram.com/alesondesign/?hl=en" className="text-military-green-secondary hover:underline">
                                     Instagram
                                 </a>
                             </li>
                             <li>
-                                <a href="#spotify" className="text-military-green-secondary hover:underline">
+                                <a href="https://open.spotify.com/user/2cn4e4oqsrw6fk15y2fbo2jsf?si=b7aa89651c14407a" className="text-military-green-secondary hover:underline">
                                     Spotify
                                 </a>
                             </li>
                             <li>
-                                <a href="#wix" className="text-military-green-secondary hover:underline">
+                                <a href="https://likhawebsolutions.wixstudio.com/likha" className="text-military-green-secondary hover:underline">
                                     Wix
                                 </a>
                             </li>
@@ -63,22 +63,22 @@ const Footer = () => {
                         <h3 className="text-gray-primary font-semibold mb-4">WORK</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#linkedin" className="text-military-green-secondary hover:underline">
+                                <a href="https://www.linkedin.com/in/aleson-galvez/" className="text-military-green-secondary hover:underline">
                                     LinkedIn
                                 </a>
                             </li>
                             <li>
-                                <a href="#behance" className="text-military-green-secondary hover:underline">
+                                <a href="https://www.behance.net/alesongalvez" className="text-military-green-secondary hover:underline">
                                     Behance
                                 </a>
                             </li>
                             <li>
-                                <a href="#dribbble" className="text-military-green-secondary hover:underline">
+                                <a href="https://dribbble.com/alesonnnnnnn" className="text-military-green-secondary hover:underline">
                                     Dribbble
                                 </a>
                             </li>
                             <li>
-                                <a href="#github" className="text-military-green-secondary hover:underline">
+                                <a href="https://github.com/alesonpro" className="text-military-green-secondary hover:underline">
                                     Github
                                 </a>
                             </li>
@@ -103,7 +103,7 @@ const Footer = () => {
                         <h3 className="text-gray-primary font-semibold mb-4">MENU</h3>
                         <ul className="space-y-2 text-center">
                             <li>
-                                <a href="#home" className="text-military-green-secondary hover:underline">
+                                <a href="#hero" className="text-military-green-secondary hover:underline">
                                     Home
                                 </a>
                             </li>
@@ -135,17 +135,17 @@ const Footer = () => {
                             <h3 className="text-gray-primary font-semibold mb-4">SOCIALS</h3>
                             <ul className="space-y-2 text-center">
                                 <li>
-                                    <a href="#instagram" className="text-military-green-secondary hover:underline">
+                                    <a href="https://www.instagram.com/alesondesign/?hl=en" className="text-military-green-secondary hover:underline">
                                         Instagram
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#spotify" className="text-military-green-secondary hover:underline">
+                                    <a href="https://open.spotify.com/user/2cn4e4oqsrw6fk15y2fbo2jsf?si=b7aa89651c14407a" className="text-military-green-secondary hover:underline">
                                         Spotify
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#wix" className="text-military-green-secondary hover:underline">
+                                    <a href="https://likhawebsolutions.wixstudio.com/likha" className="text-military-green-secondary hover:underline">
                                         Wix
                                     </a>
                                 </li>
@@ -156,22 +156,22 @@ const Footer = () => {
                             <h3 className="text-gray-primary font-semibold mb-4">WORK</h3>
                             <ul className="space-y-2 text-center">
                                 <li>
-                                    <a href="#linkedin" className="text-military-green-secondary hover:underline">
+                                    <a href="https://www.linkedin.com/in/aleson-galvez/" className="text-military-green-secondary hover:underline">
                                         LinkedIn
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#behance" className="text-military-green-secondary hover:underline">
+                                    <a href="https://www.behance.net/alesongalvez" className="text-military-green-secondary hover:underline">
                                         Behance
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#dribbble" className="text-military-green-secondary hover:underline">
+                                    <a href="https://dribbble.com/alesonnnnnnn" className="text-military-green-secondary hover:underline">
                                         Dribbble
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#github" className="text-military-green-secondary hover:underline">
+                                    <a href="https://github.com/alesonpro" className="text-military-green-secondary hover:underline">
                                         Github
                                     </a>
                                 </li>

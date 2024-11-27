@@ -31,7 +31,9 @@ module.exports = {
         'brown-primary': "#513714"
       },
     },
+    
   },
+  
   plugins: [],
 }
 

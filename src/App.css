@@ -5,3 +5,75 @@ html {
 body {
   scroll-behavior: smooth;
 }
+
+/* Add smooth transition properties globally */
+.app-container {
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Add specific styles for each section during the transition */
+.translate-y-10 {
+    transform: translateY(10px);
+    /* Element starts below */
+    opacity: 0;
+    /* Invisible */
+}
+
+.translate-y-0 {
+    transform: translateY(0);
+    /* Element moves to its normal position */
+    opacity: 1;
+    /* Fully visible */
+}
+
+.scale-90 {
+    transform: scale(0.9);
+    /* Element starts smaller */
+}
+
+.scale-100 {
+    transform: scale(1);
+    /* Element grows to full size */
+}
+
+
+/* Add the transitions for smooth fading and sliding */
+.testimonial-text,
+.testimonial-image {
+    opacity: 0;
+    transform: translateY(20px); /* Slightly moved down for entrance */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When the testimonial changes, the opacity and position will animate */
+.testimonial-text,
+.testimonial-image {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 640px) {
+    .testimonial-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-image {
+        max-width: 250px;
+    }
+}
+
+
+

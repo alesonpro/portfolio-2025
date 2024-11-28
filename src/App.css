@@ -86,3 +86,64 @@ body {
 
 
 
+/* Hide the default cursor */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    cursor: none;
+    /* Hide default cursor */
+}
+
+/* Custom cursor styles */
+.cursor {
+    position: fixed;
+    /* Fixed positioning to ensure it follows the mouse everywhere */
+    width: 20px;
+    /* Increased size of the cursor */
+    height: 20px;
+    background-color: #63634F;
+    /* Military green color */
+    border-radius: 50%;
+    /* Make it circular */
+    pointer-events: none;
+    /* Prevent the cursor from blocking interactions */
+    transform: translate(-50%, -50%);
+    /* Center the cursor */
+    z-index: 9999;
+    /* Ensure it's on top of other elements */
+    transition: transform 0.2s ease-in-out, width 0.2s ease, height 0.2s ease;
+    /* Smooth transition */
+}
+
+/* Animation when the cursor is hovering over clickable elements */
+.cursor-hover {
+    animation: cursorScale 0.3s ease-in-out infinite alternate;
+}
+
+/* Cursor scaling animation */
+@keyframes cursorScale {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+/* Optional: Add hover effect on interactive elements (like buttons) */
+button:hover,
+a:hover {
+    cursor: pointer;
+}
+
+button:hover~.cursor,
+a:hover~.cursor {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* App container for smooth scrolling */
+.app-container {
+    position: relative;
+    overflow-x: hidden;
+}

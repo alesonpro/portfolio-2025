@@ -92,7 +92,7 @@ function Navbar() {
                         key={ link.href }
                         href={ link.href }
                         onClick={ handleLinkClick }
-                        className="text-4xl sm:text-5xl lg:text-7xl text-white-primary font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4"
+                        className="text-4xl sm:text-5xl lg:text-7xl text-white-primary font-bold transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4"
                     >
                         { link.label }
                     </a>
@@ -100,12 +100,12 @@ function Navbar() {
 
                 {/* Email Section */ }
                 <div>
-                    <p className="mt-32 sm:mt-60 md:mt-56 lg:mt-32 text-base sm:text-base lg:text-xl text-white-dark-theme font-medium">
+                    <p className="mt-32 sm:mt-60 md:mt-56 lg:mt-32 text-base sm:text-base lg:text-xl text-white-tertiary font-medium">
                         EMAIL ADDRESS
                     </p>
                     <a
                         href="mailto:rolfaleson.pro@gmail.com"
-                        className="text-xl sm:text-base lg:text-xl text-off-white-dark-theme font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4 mt-2"
+                        className="text-xl sm:text-base lg:text-xl text-off-white-black font-medium transition-all duration-300 hover:scale-105 hover:text-military-green-secondary hover:underline hover:underline-offset-4 mt-2"
                     >
                         rolfaleson.pro@gmail.com
                     </a>

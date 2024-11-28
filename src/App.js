@@ -10,11 +10,33 @@ import './App.css'; // Ensure your custom CSS is imported
 
 function App() {
   const [ isLoaded, setIsLoaded ] = useState( false );
+  const [ cursorPosition, setCursorPosition ] = useState( { x: 0, y: 0 } );
+  const [ isDesktop, setIsDesktop ] = useState( window.innerWidth > 1024 ); // Adjust breakpoint as needed
 
   useEffect( () => {
     // Set a delay for the page loading animation (scale & fade-in)
     setTimeout( () => setIsLoaded( true ), 1500 ); // 1.5 seconds delay
-  }, [] );
+
+    // Update cursor position based on mouse movement for desktop only
+    const handleMouseMove = ( e ) => {
+      if ( isDesktop ) {
+        setCursorPosition( { x: e.clientX, y: e.clientY } );
+      }
+    };
+
+    // Update screen size and detect if it's desktop
+    const handleResize = () => {
+      setIsDesktop( window.innerWidth > 1024 );
+    };
+
+    window.addEventListener( 'mousemove', handleMouseMove );
+    window.addEventListener( 'resize', handleResize );
+
+    return () => {
+      window.removeEventListener( 'mousemove', handleMouseMove );
+      window.removeEventListener( 'resize', handleResize );
+    };
+  }, [ isDesktop ] );
 
   return (
     <div
@@ -25,6 +47,17 @@ function App() {
         overflowX: 'hidden', // Prevent horizontal scrolling
       } }
     >
+      {/* Custom cursor - Only visible on desktop */ }
+      { isDesktop && (
+        <div
+          className="cursor"
+          style={ {
+            left: `${ cursorPosition.x }px`,
+            top: `${ cursorPosition.y }px`,
+          } }
+        ></div>
+      ) }
+
       <Navbar />
       <Hero id="hero" />
 

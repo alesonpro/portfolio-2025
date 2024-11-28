@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ReactComponent as Logo } from '../assets/header-logo.svg'; // Import your SVG logo
 import heroProfile from '../assets/hero-profile.png'; // Import the image
 import backgroundWhite from '../assets/background-white.png'; // Import the background image
@@ -6,12 +6,27 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function Hero() {
-    // Initialize AOS
+    const [ time, setTime ] = useState( '' );
+    const [ location, setLocation ] = useState( 'Philippines' ); // Set your default location
+
     useEffect( () => {
+        // Initialize AOS
         AOS.init( {
             duration: 1000, // Animation duration in ms
             once: true, // Animation happens only once
         } );
+
+        // Update time every second
+        const updateTime = () => {
+            const now = new Date();
+            const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            setTime( now.toLocaleTimeString( 'en-US', options ) );
+        };
+
+        const timer = setInterval( updateTime, 1000 );
+
+        // Cleanup interval on component unmount
+        return () => clearInterval( timer );
     }, [] );
 
     return (
@@ -47,6 +62,12 @@ function Hero() {
                             Hire me!
                         </button>
                     </a>
+                    {/* Local Time Tracker */ }
+                    <div className="mt-44 hidden md:block"> {/* Hides on screens smaller than md */ }
+                        <p className="text-grey-secondary font-bold text-lg">
+                            LOCAL TIME: <span className="font-bold">{ time }</span> - { location }
+                        </p>
+                    </div>
                 </div>
 
                 {/* Right Column - Image */ }

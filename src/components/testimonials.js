@@ -74,38 +74,20 @@ function Testimonials() {
         <div>
             <div id="testimonials">
                 <section className="px-4 sm:px-6 lg:px-8 py-16 overflow-x-hidden">
-                    <div
-                        className="text-military-green font-bold text-2xl sm:text-3xl md:text-4xl sm:text-left mb-4 sm:mb-0"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                    >
+                    <div className="text-military-green font-bold text-2xl sm:text-3xl md:text-4xl sm:text-left mb-4 sm:mb-0">
                         (testimonial)
                     </div>
-                    <h2
-                        className="text-black-secondary font-bold text-left leading-tight text-[35px] md:text-[50px] lg:text-[110px] max-w-[25ch]"
-                        data-aos="fade-left"
-                        data-aos-duration="1000"
-                    >
+                    <h2 className="text-black-secondary font-bold text-left leading-tight text-[35px] md:text-[50px] lg:text-[110px] max-w-[25ch]">
                         Words from Those Who’ve Worked With Me
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
                         {/* Left Column */ }
                         <div className="flex flex-col justify-start px-4 order-last md:order-first relative">
-                            <h4
-                                key={ currentIndex }
-                                className="mt-4 sm:mt-8 text-grey-primary font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-left min-h-[180px] overflow-hidden testimonial-text"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                            >
+                            <h4 className="mt-4 sm:mt-8 text-grey-primary font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-left min-h-[180px] overflow-hidden testimonial-text">
                                 { testimonials[ currentIndex ].quote }
                             </h4>
-                            <div
-                                className="mt-6 sm:mt-8 md:mt-10"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="200"
-                            >
+                            <div className="mt-6 sm:mt-8 md:mt-10">
                                 <p className="text-black-secondary font-bold text-[18px] lg:text-[22px]">
                                     { testimonials[ currentIndex ].name }
                                 </p>
@@ -131,13 +113,8 @@ function Testimonials() {
                         </div>
 
                         {/* Right Column */ }
-                        <div
-                            className="flex justify-center items-center px-4 order-first md:order-last"
-                            data-aos="fade-in"
-                            data-aos-duration="1000"
-                        >
+                        <div className="flex justify-center items-center px-4 order-first md:order-last">
                             <img
-                                key={ currentIndex }
                                 src={ testimonials[ currentIndex ].image }
                                 alt={ `Testimonial ${ currentIndex + 1 }` }
                                 className="w-full max-w-[320px] md:max-w-[350px] lg:max-w-[510px] object-contain testimonial-image"
@@ -158,14 +135,14 @@ function Testimonials() {
                     } }
                 >
                     <div id="contact" className="rounded-[50px] text-center text-white min-h-[500px] sm:min-h-0 flex flex-col justify-center">
-                        <p className="text-grey-secondary text-xl sm:text-2xl md:text-3xl font-medium mb-6">
+                        <p className="text-grey-secondary text-xl sm:text-2xl md:text-3xl font-medium mb-6" data-aos="fade-up">
                             Got a challenge?
                         </p>
-                        <h2 className="font-bold text-off-white-dark-theme text-4xl sm:text-5xl md:text-7xl lg:text-9xl leading-tight mb-6">
+                        <h2 className="font-bold text-off-white-dark-theme text-4xl sm:text-5xl md:text-7xl lg:text-9xl leading-tight mb-6" data-aos="zoom-in">
                             LET'S MAKE <br /> IT HAPPEN
                         </h2>
                         <div className="flex justify-center">
-                            <button className="inline-flex bg-grey-primary text-white-secondary py-3 px-6 rounded-md text-lg sm:text-xl font-semibold mb-6">
+                            <button className="inline-flex bg-grey-primary text-white-secondary py-3 px-6 rounded-md text-lg sm:text-xl font-semibold mb-6" data-aos="zoom-in">
                                 <a
                                     href="mailto:rolfaleson.pro@gmail.com"
                                     className="w-full text-center"
@@ -181,7 +158,6 @@ function Testimonials() {
                                 LOCAL TIME
                             </p>
                             <p className="text-off-white-dark-theme font-medium text-lg">
-                                {/* On mobile (sm) it will be block, on larger screens (md and above) it will be inline */ }
                                 <span className="block sm:inline">{ time }</span>
                                 <span className="block sm:inline">{ location }</span>
                             </p>

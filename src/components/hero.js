@@ -4,37 +4,39 @@ import heroProfile from '../assets/hero-profile.png'; // Import the image
 import backgroundWhite from '../assets/background-white.png'; // Import the background image
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { DateTime } from 'luxon'; // Import luxon for handling timezones
 
 function Hero() {
-    const [ time, setTime ] = useState( '' );
-    const [ location, setLocation ] = useState( 'Philippines' ); // Set your default location
+    const [time, setTime] = useState('');
+    const [location, setLocation] = useState('Philippines'); // Set the location to the name of the country
 
-    useEffect( () => {
+    useEffect(() => {
         // Initialize AOS
-        AOS.init( {
+        AOS.init({
             duration: 1000, // Animation duration in ms
             once: true, // Animation happens only once
-        } );
+        });
 
-        // Update time every second
+        // Update time every second based on the location
         const updateTime = () => {
-            const now = new Date();
-            const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            setTime( now.toLocaleTimeString( 'en-US', options ) );
+            // Use Intl.DateTimeFormat to get the location's time
+            const now = DateTime.now().setZone('Asia/Manila'); // Ensure using correct timezone internally
+            const timeString = now.toFormat('hh:mm:ss a'); // Format the time string as you want
+            setTime(timeString);
         };
 
-        const timer = setInterval( updateTime, 1000 );
+        const timer = setInterval(updateTime, 1000);
 
         // Cleanup interval on component unmount
-        return () => clearInterval( timer );
-    }, [] );
+        return () => clearInterval(timer);
+    }, [location]); // Re-run effect if location changes
 
     return (
         <div
             className="flex flex-col items-center justify-start pt-8 h-screen font-poppins bg-cover bg-center"
-            style={ { backgroundImage: `url(${ backgroundWhite })` } }
+            style={{ backgroundImage: `url(${backgroundWhite})` }}
         >
-            {/* SVG Logo */ }
+            {/* SVG Logo */}
             <div
                 id="hero"
                 href="#"
@@ -44,12 +46,12 @@ function Hero() {
                 <Logo className="mx-auto h-auto w-full" />
             </div>
 
-            {/* 2-Column Section */ }
+            {/* 2-Column Section */}
             <div
                 className="relative flex flex-col sm:flex-row items-center sm:items-start justify-between w-[315px] sm:w-[600px] lg:w-[1100px]"
                 data-aos="fade-up"
             >
-                {/* Left Column - Text and Button */ }
+                {/* Left Column - Text and Button */}
                 <div
                     className="sm:w-1/2 mb-8 sm:mb-0 text-center sm:text-left relative"
                     data-aos="fade-right"
@@ -62,21 +64,21 @@ function Hero() {
                             Hire me!
                         </button>
                     </a>
-                    {/* Local Time Tracker */ }
-                    <div className="mt-44 hidden md:block"> {/* Hides on screens smaller than md */ }
+                    {/* Local Time Tracker */}
+                    <div className="mt-44 hidden md:block"> {/* Hides on screens smaller than md */}
                         <p className="text-grey-secondary font-bold text-lg">
-                            LOCAL TIME: <span className="font-bold">{ time }</span> - { location }
+                            LOCAL TIME: <span className="font-bold">{time}</span> - {location}
                         </p>
                     </div>
                 </div>
 
-                {/* Right Column - Image */ }
+                {/* Right Column - Image */}
                 <div
                     className="sm:w-1/2 flex justify-center"
                     data-aos="fade-left"
                 >
                     <img
-                        src={ heroProfile }
+                        src={heroProfile}
                         alt="Hero Profile"
                         className="w-[327px] sm:w-[327px] lg:w-[425px] h-auto rounded-lg shadow-md"
                     />

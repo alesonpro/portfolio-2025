@@ -5,6 +5,7 @@ import backgroundBlack from '../assets/background-black.png'; // Background imag
 import projectImage from '../assets/project-1.png'; // Replace with your actual project image
 import projectImage2 from '../assets/project-2.png'; // Replace with your second project image
 import projectImage3 from '../assets/project-3.png'; // Replace with your third project image
+import projectImage4 from '../assets/project-4.png'; // Replace with your third project image
 
 function Works() {
     const [ currentProject, setCurrentProject ] = useState( 1 );
@@ -29,6 +30,12 @@ function Works() {
             title: 'FitFUTR Case Study',
             year: 2024,
             link: 'https://www.behance.net/gallery/212090317/UX-Case-Study-FitFUTR' 
+        },
+        {
+            image: projectImage4,
+            title: 'FeeLancer Case Study',
+            year: 2024,
+            link: 'https://www.behance.net/gallery/214688511/UX-Case-Study-FeeLancer' 
         },
     ];
 
@@ -89,7 +96,7 @@ function Works() {
                         (project)
                     </div>
                     <div className="text-off-white-black text-lg sm:text-xl md:text-2xl sm:ml-8 text-center sm:text-left max-w-lg lg:max-w-md xl:max-w-[40ch]">
-                        Showcasing projects crafted with passion, including a case study and work for real-world clients.
+                        Showcasing projects crafted with passion, including case studies and work for real-world clients.
                     </div>
                 </div>
             </div>

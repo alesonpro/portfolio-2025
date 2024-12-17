@@ -14,6 +14,18 @@ function Works() {
     // Project details with added links
     const projects = [
         {
+            image: projectImage4,
+            title: 'FeeLancer Case Study',
+            year: 2024,
+            link: 'https://www.behance.net/gallery/214688511/UX-Case-Study-FeeLancer' 
+        },
+        {
+            image: projectImage3,
+            title: 'FitFUTR Case Study',
+            year: 2024,
+            link: 'https://www.behance.net/gallery/212090317/UX-Case-Study-FitFUTR' 
+        },
+        {
             image: projectImage,
             title: 'Taraki Consortium',
             year: 2024,
@@ -24,18 +36,6 @@ function Works() {
             title: 'INTTO',
             year: 2024,
             link: 'https://intto.vercel.app/' 
-        },
-        {
-            image: projectImage3,
-            title: 'FitFUTR Case Study',
-            year: 2024,
-            link: 'https://www.behance.net/gallery/212090317/UX-Case-Study-FitFUTR' 
-        },
-        {
-            image: projectImage4,
-            title: 'FeeLancer Case Study',
-            year: 2024,
-            link: 'https://www.behance.net/gallery/214688511/UX-Case-Study-FeeLancer' 
         },
     ];
 

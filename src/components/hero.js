@@ -8,7 +8,7 @@ import { DateTime } from 'luxon'; // Import luxon for handling timezones
 
 function Hero() {
     const [time, setTime] = useState('');
-    const [location, setLocation] = useState('Philippines'); // Set the location to the name of the country
+    const [location, setLocation] = useState('Italy'); // Set the location to the name of the country
 
     useEffect(() => {
         // Initialize AOS
@@ -20,7 +20,7 @@ function Hero() {
         // Update time every second based on the location
         const updateTime = () => {
             // Use Intl.DateTimeFormat to get the location's time
-            const now = DateTime.now().setZone('Asia/Manila'); // Ensure using correct timezone internally
+            const now = DateTime.now().setZone('Europe/Rome'); // Ensure using correct timezone internally
             const timeString = now.toFormat('hh:mm:ss a'); // Format the time string as you want
             setTime(timeString);
         };

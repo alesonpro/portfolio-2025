@@ -34,7 +34,7 @@ function Testimonials() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [time, setTime] = useState('');
-    const [location, setLocation] = useState('Philippines'); // Use country name here
+    const [location, setLocation] = useState('Italy'); // Use country name here
 
     const handlePrev = () => {
         setCurrentIndex((prevIndex) =>
@@ -51,7 +51,7 @@ function Testimonials() {
     useEffect(() => {
         // Function to update time every second
         const updateTime = () => {
-            const now = DateTime.now().setZone("Asia/Manila"); // Set to the Philippines timezone
+            const now = DateTime.now().setZone("Europe/Rome"); // Set to the Philippines timezone
             const timeString = now.toFormat("hh:mm:ss a"); // Format the time as hh:mm:ss AM/PM
             setTime(timeString);
         };

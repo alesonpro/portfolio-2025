@@ -140,7 +140,7 @@ const Footer = () => {
                             <h3 className="text-gray-primary font-semibold mb-4">SOCIALS</h3>
                             <ul className="space-y-2 text-center">
                                 <li>
-                                    <a href="https://www.instagram.com/alesondesign/?hl=en" className="text-military-green-secondary hover:underline">
+                                    <a href="https://www.instagram.com/alesonslife/?hl=en" className="text-military-green-secondary hover:underline">
                                         Instagram
                                     </a>
                                 </li>

@@ -42,7 +42,7 @@ const Footer = () => {
                         <h3 className="text-gray-primary font-semibold mb-4">SOCIALS</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="https://www.instagram.com/alesondesign/?hl=en" className="text-military-green-secondary hover:underline">
+                                <a href="https://www.instagram.com/alesonslife/?hl=en" className="text-military-green-secondary hover:underline">
                                     Instagram
                                 </a>
                             </li>
@@ -52,8 +52,8 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://likhawebsolutions.wixstudio.com/likha" className="text-military-green-secondary hover:underline">
-                                    Wix
+                                <a href="https://likhawebsolutions.netlify.app/" className="text-military-green-secondary hover:underline">
+                                    Likha
                                 </a>
                             </li>
                         </ul>
@@ -83,7 +83,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://drive.google.com/file/d/1K77AmZa5inSeZgx5vUTeMPLtkHsjUbDX/view?usp=sharing" className="text-military-green-secondary hover:underline">
+                                <a href="https://drive.google.com/drive/folders/1G0OoMW13Joi2Q-3J118yPwS7l4c3OjUV?usp=sharing" className="text-military-green-secondary hover:underline">
                                     Resume
                                 </a>
                             </li>
@@ -151,7 +151,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <a href="https://likhawebsolutions.wixstudio.com/likha" className="text-military-green-secondary hover:underline">
-                                        Wix
+                                        Likha
                                     </a>
                                 </li>
                             </ul>
@@ -181,7 +181,7 @@ const Footer = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://drive.google.com/file/d/1K77AmZa5inSeZgx5vUTeMPLtkHsjUbDX/view?usp=sharing" className="text-military-green-secondary hover:underline">
+                                    <a href="https://drive.google.com/file/d/1EpVUu4oPL6p9N-jt73lUds3yVzorjiSt/view?usp=sharing" className="text-military-green-secondary hover:underline">
                                         Resume
                                     </a>
                                 </li>
@@ -193,7 +193,7 @@ const Footer = () => {
                 {/* Logo and Copyright */ }
                 <div className="text-center mt-10">
                     <p className="text-military-green-secondary">
-                        © 2024 Rolf Aleson Galvez. All Rights Reserved.
+                        © 2025 Rolf Aleson Galvez. All Rights Reserved.
                     </p>
                 </div>
             </div>

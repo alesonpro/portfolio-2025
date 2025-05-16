@@ -83,7 +83,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://drive.google.com/drive/folders/1G0OoMW13Joi2Q-3J118yPwS7l4c3OjUV?usp=sharing" className="text-military-green-secondary hover:underline">
+                                <a href="https://drive.google.com/file/d/1EpVUu4oPL6p9N-jt73lUds3yVzorjiSt/view?usp=sharing" className="text-military-green-secondary hover:underline">
                                     Resume
                                 </a>
                             </li>

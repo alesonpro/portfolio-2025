@@ -82,11 +82,11 @@ function Navbar() {
                     { href: '#about', label: 'ABOUT' },
                     { href: '#testimonials', label: 'TESTIMONIALS' },
                     { href: '#contact', label: 'CONTACT' },
-                    {
-                        href: 'https://drive.google.com/file/d/1EpVUu4oPL6p9N-jt73lUds3yVzorjiSt/view?usp=sharing', // Google Drive link
-                        label: 'RESUME',
-                        target: '_blank', 
-                    },
+                    // {
+                    //     href: 'https://drive.google.com/file/d/1EpVUu4oPL6p9N-jt73lUds3yVzorjiSt/view?usp=sharing', // Google Drive link
+                    //     label: 'RESUME',
+                    //     target: '_blank', 
+                    // },
                 ].map( ( link ) => (
                     <a
                         key={ link.href }

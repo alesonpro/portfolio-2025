@@ -8,7 +8,7 @@ import { DateTime } from 'luxon'; // Import luxon for handling timezones
 
 function Hero() {
     const [time, setTime] = useState('');
-    const [location, setLocation] = useState('Italy'); // Set the location to the name of the country
+    const [location] = useState('Italy'); // Set the location to the name of the country
 
     useEffect(() => {
         // Initialize AOS

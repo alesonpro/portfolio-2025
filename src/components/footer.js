@@ -82,11 +82,11 @@ const Footer = () => {
                                     Github
                                 </a>
                             </li>
-                            <li>
+                            {/* <li>
                                 <a href="https://drive.google.com/file/d/1EpVUu4oPL6p9N-jt73lUds3yVzorjiSt/view?usp=sharing" className="text-military-green-secondary hover:underline">
                                     Resume
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
@@ -180,11 +180,11 @@ const Footer = () => {
                                         Github
                                     </a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="https://drive.google.com/file/d/1EpVUu4oPL6p9N-jt73lUds3yVzorjiSt/view?usp=sharing" className="text-military-green-secondary hover:underline">
                                         Resume
                                     </a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>

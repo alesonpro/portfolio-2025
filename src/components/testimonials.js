@@ -34,7 +34,7 @@ function Testimonials() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [time, setTime] = useState('');
-    const [location, setLocation] = useState('Italy'); // Use country name here
+    const [location] = useState('Italy'); // Use country name here
 
     const handlePrev = () => {
         setCurrentIndex((prevIndex) =>

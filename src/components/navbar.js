@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ReactComponent as Logo } from '../assets/logo-dark.svg'; // Import your SVG logo
+// import { ReactComponent as Logo } from '../assets/logo-dark.svg'; 
 
 function Navbar() {
     const [ isOpen, setIsOpen ] = useState( false );

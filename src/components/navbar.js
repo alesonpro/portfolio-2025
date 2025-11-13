@@ -74,7 +74,7 @@ function Navbar() {
                         />
                     </svg>
                 </button>
-
+                {/* removed the resume link for now */}
                 {/* Navigation Links */ }
                 { [
                     { href: '#hero', label: 'HOME' },

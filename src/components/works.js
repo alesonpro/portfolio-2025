@@ -5,7 +5,8 @@ import backgroundBlack from '../assets/background-black.png'; // Background imag
 import projectImage from '../assets/project-1.png'; // Replace with your actual project image
 import projectImage2 from '../assets/project-2.png'; // Replace with your second project image
 import projectImage3 from '../assets/project-3.png'; // Replace with your third project image
-import projectImage4 from '../assets/project-4.png'; // Replace with your third project image
+import projectImage4 from '../assets/project-4.png'; // Replace with your fourth project image
+import projectImage5 from '../assets/project-5.png'; // Replace with your fifth project image
 
 function Works() {
     const [ currentProject, setCurrentProject ] = useState( 1 );
@@ -13,6 +14,14 @@ function Works() {
 
     // Project details with added links
     const projects = [
+
+         {
+            image: projectImage5,
+            title: 'Likha Web Solutions',
+            year: 2025,
+            link: 'https://likhawebsolutions.com/' 
+        },
+
         {
             image: projectImage4,
             title: 'FeeLancer Case Study',

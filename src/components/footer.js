@@ -193,7 +193,7 @@ const Footer = () => {
                 {/* Logo and Copyright */ }
                 <div className="text-center mt-10">
                     <p className="text-military-green-secondary">
-                        © 2025 Rolf Aleson Galvez. All Rights Reserved.
+                        © 2026 Rolf Aleson Galvez. All Rights Reserved.
                     </p>
                 </div>
             </div>

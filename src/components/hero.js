@@ -57,7 +57,7 @@ function Hero() {
                     data-aos="fade-right"
                 >
                     <p className="text-base sm:text-2xl lg:text-3xl font-semibold text-military-green mb-4">
-                    I turn ideas into intuitive, impactful digital experiences. With a strong eye for design and a focus on usability, I craft seamless interfaces that bring your vision to life. Ready to create something exceptional? Let’s connect!
+                   I design intuitive digital experiences and manage social media that connects brands with real people. With a strong focus on usability, visual clarity, and audience engagement, I turn ideas into products and content that deliver impact. Let’s build something meaningful together.
                     </p>
                     <a href="mailto:rolfaleson.pro@gmail.com?subject=Inquiry about Design Services&body=Hi, I would like to inquire about your design services.">
                         <button className="mt-8 bg-grey-primary text-white-secondary font-bold py-4 px-12 rounded-2xl shadow-lg hover:scale-105 hover:bg-gradient-to-r hover:from-military-green hover:to-military-green-secondary hover:shadow-2xl transition-all duration-300">
